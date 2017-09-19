@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kjones/Desktop/CS350_Labs/CS350_Lab03/Histogram.cpp
+iostream
+-
+Histogram.h
+/home/kjones/Desktop/CS350_Labs/CS350_Lab03/Histogram.h
+
+/home/kjones/Desktop/CS350_Labs/CS350_Lab03/Histogram.h
+
+/home/kjones/Desktop/CS350_Labs/CS350_Lab03/main.cpp
+iostream
+-
+cassert
+-
+Histogram.h
+/home/kjones/Desktop/CS350_Labs/CS350_Lab03/Histogram.h
+

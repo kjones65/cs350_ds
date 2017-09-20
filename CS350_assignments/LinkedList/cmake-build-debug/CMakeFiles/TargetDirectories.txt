@@ -1,3 +1,3 @@
-/home/kjones/Desktop/CS350_assignments/LinkedList/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/kjones/Desktop/CS350_assignments/LinkedList/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/kjones/Desktop/CS350_assignments/LinkedList/cmake-build-debug/CMakeFiles/LinkedList.dir
+/home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/cmake-build-debug/CMakeFiles/LinkedList.dir

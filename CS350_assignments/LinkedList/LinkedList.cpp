@@ -38,12 +38,11 @@ LinkedList<T>::~LinkedList()
 /* **************************************************************** */
 
 #if ALL || GETFIRST
-// TODO: Make sure you are returning the correct thing here (const reference to a T object)
+// getFirst
 template <class T>
 const T& LinkedList<T>::getFirst() const {
     const T &first = dummy->next->data;
-//    Node<T> *const &first =dummy->next;
-//    return first->data;
+
     return first;
 }
 
@@ -52,12 +51,11 @@ const T& LinkedList<T>::getFirst() const {
 /* **************************************************************** */
 
 #if ALL || GETLAST
-// TODO: getLast
+// getLast
 template <class T>
 const T& LinkedList<T>::getLast() const {
     const T &last = dummy->prev->data;
-//    Node<T> *const &first =dummy->next;
-//    return first->data;
+
     return last;
 }
 #endif
@@ -79,14 +77,11 @@ bool LinkedList<T>::find(const T &x) const {
 template <class T>
 Node<T>* LinkedList<T>::findNode(const T &x) const {
     Node<T> *nodeAdr = dummy->next;
-    while(nodeAdr!=dummy) {
-        if(x==nodeAdr->data) {
-            return nodeAdr;
-        }
+    while(nodeAdr!=dummy && nodeAdr->data != x) {
         nodeAdr = nodeAdr->next;
     }
 
-    return dummy;
+    return nodeAdr;
 
 }
 #endif
@@ -145,6 +140,8 @@ void LinkedList<T>::makeEmpty() {
         remove(nextNode->data);
         nextNode = nextNode->next;
     }
+
+    dummy->next = dummy->prev = dummy;
 }
 #endif
 

@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/kjones/Desktop/CS350_assignments/LinkedList/LinkedList.cpp" "/home/kjones/Desktop/CS350_assignments/LinkedList/cmake-build-debug/CMakeFiles/LinkedList.dir/LinkedList.cpp.o"
-  "/home/kjones/Desktop/CS350_assignments/LinkedList/tests.cpp" "/home/kjones/Desktop/CS350_assignments/LinkedList/cmake-build-debug/CMakeFiles/LinkedList.dir/tests.cpp.o"
+  "/home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/LinkedList.cpp" "/home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/cmake-build-debug/CMakeFiles/LinkedList.dir/LinkedList.cpp.o"
+  "/home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/tests.cpp" "/home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/cmake-build-debug/CMakeFiles/LinkedList.dir/tests.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

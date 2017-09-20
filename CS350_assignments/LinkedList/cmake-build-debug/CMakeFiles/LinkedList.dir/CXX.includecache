@@ -6,23 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/kjones/Desktop/CS350_assignments/LinkedList/Flags.h
+/home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/Flags.h
 
-/home/kjones/Desktop/CS350_assignments/LinkedList/LinkedList.cpp
+/home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/LinkedList.cpp
 LinkedList.h
-/home/kjones/Desktop/CS350_assignments/LinkedList/LinkedList.h
+/home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/LinkedList.h
 Flags.h
-/home/kjones/Desktop/CS350_assignments/LinkedList/Flags.h
+/home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/Flags.h
 
-/home/kjones/Desktop/CS350_assignments/LinkedList/LinkedList.h
+/home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/LinkedList.h
 iostream
 -
 Node.h
-/home/kjones/Desktop/CS350_assignments/LinkedList/Node.h
+/home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/Node.h
 
-/home/kjones/Desktop/CS350_assignments/LinkedList/Node.h
+/home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/Node.h
 
-/home/kjones/Desktop/CS350_assignments/LinkedList/catch.hpp
+/home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/catch.hpp
 sstream
 -
 stdexcept
@@ -198,7 +198,7 @@ random
 map
 -
 Foundation/Foundation.h
-/home/kjones/Desktop/CS350_assignments/LinkedList/Foundation/Foundation.h
+/home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/Foundation/Foundation.h
 ostream
 -
 stdexcept
@@ -254,11 +254,11 @@ iomanip
 assert.h
 -
 
-/home/kjones/Desktop/CS350_assignments/LinkedList/tests.cpp
+/home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/tests.cpp
 iostream
 -
 LinkedList.h
-/home/kjones/Desktop/CS350_assignments/LinkedList/LinkedList.h
+/home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/LinkedList.h
 catch.hpp
-/home/kjones/Desktop/CS350_assignments/LinkedList/catch.hpp
+/home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/catch.hpp
 

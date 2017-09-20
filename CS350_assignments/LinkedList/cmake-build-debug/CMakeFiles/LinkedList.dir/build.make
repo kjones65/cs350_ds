@@ -43,10 +43,10 @@ RM = /opt/clion-2017.2.2/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kjones/Desktop/CS350_assignments/LinkedList
+CMAKE_SOURCE_DIR = /home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kjones/Desktop/CS350_assignments/LinkedList/cmake-build-debug
+CMAKE_BINARY_DIR = /home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/LinkedList.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/LinkedList.dir/flags.make
 
 CMakeFiles/LinkedList.dir/LinkedList.cpp.o: CMakeFiles/LinkedList.dir/flags.make
 CMakeFiles/LinkedList.dir/LinkedList.cpp.o: ../LinkedList.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kjones/Desktop/CS350_assignments/LinkedList/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/LinkedList.dir/LinkedList.cpp.o"
-	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LinkedList.dir/LinkedList.cpp.o -c /home/kjones/Desktop/CS350_assignments/LinkedList/LinkedList.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/LinkedList.dir/LinkedList.cpp.o"
+	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LinkedList.dir/LinkedList.cpp.o -c /home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/LinkedList.cpp
 
 CMakeFiles/LinkedList.dir/LinkedList.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LinkedList.dir/LinkedList.cpp.i"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kjones/Desktop/CS350_assignments/LinkedList/LinkedList.cpp > CMakeFiles/LinkedList.dir/LinkedList.cpp.i
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/LinkedList.cpp > CMakeFiles/LinkedList.dir/LinkedList.cpp.i
 
 CMakeFiles/LinkedList.dir/LinkedList.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LinkedList.dir/LinkedList.cpp.s"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kjones/Desktop/CS350_assignments/LinkedList/LinkedList.cpp -o CMakeFiles/LinkedList.dir/LinkedList.cpp.s
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/LinkedList.cpp -o CMakeFiles/LinkedList.dir/LinkedList.cpp.s
 
 CMakeFiles/LinkedList.dir/LinkedList.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/LinkedList.dir/LinkedList.cpp.o.provides.build: CMakeFiles/LinkedList
 
 CMakeFiles/LinkedList.dir/tests.cpp.o: CMakeFiles/LinkedList.dir/flags.make
 CMakeFiles/LinkedList.dir/tests.cpp.o: ../tests.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kjones/Desktop/CS350_assignments/LinkedList/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/LinkedList.dir/tests.cpp.o"
-	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LinkedList.dir/tests.cpp.o -c /home/kjones/Desktop/CS350_assignments/LinkedList/tests.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/LinkedList.dir/tests.cpp.o"
+	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LinkedList.dir/tests.cpp.o -c /home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/tests.cpp
 
 CMakeFiles/LinkedList.dir/tests.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LinkedList.dir/tests.cpp.i"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kjones/Desktop/CS350_assignments/LinkedList/tests.cpp > CMakeFiles/LinkedList.dir/tests.cpp.i
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/tests.cpp > CMakeFiles/LinkedList.dir/tests.cpp.i
 
 CMakeFiles/LinkedList.dir/tests.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LinkedList.dir/tests.cpp.s"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kjones/Desktop/CS350_assignments/LinkedList/tests.cpp -o CMakeFiles/LinkedList.dir/tests.cpp.s
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/tests.cpp -o CMakeFiles/LinkedList.dir/tests.cpp.s
 
 CMakeFiles/LinkedList.dir/tests.cpp.o.requires:
 
@@ -118,7 +118,7 @@ LinkedList_EXTERNAL_OBJECTS =
 ../LinkedList: CMakeFiles/LinkedList.dir/build.make
 ../LinkedList: ../libLinkedList_Linux.a
 ../LinkedList: CMakeFiles/LinkedList.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kjones/Desktop/CS350_assignments/LinkedList/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../LinkedList"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../LinkedList"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LinkedList.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -136,6 +136,6 @@ CMakeFiles/LinkedList.dir/clean:
 .PHONY : CMakeFiles/LinkedList.dir/clean
 
 CMakeFiles/LinkedList.dir/depend:
-	cd /home/kjones/Desktop/CS350_assignments/LinkedList/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kjones/Desktop/CS350_assignments/LinkedList /home/kjones/Desktop/CS350_assignments/LinkedList /home/kjones/Desktop/CS350_assignments/LinkedList/cmake-build-debug /home/kjones/Desktop/CS350_assignments/LinkedList/cmake-build-debug /home/kjones/Desktop/CS350_assignments/LinkedList/cmake-build-debug/CMakeFiles/LinkedList.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList /home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList /home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/cmake-build-debug /home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/cmake-build-debug /home/kjones/Desktop/cs350_ds/CS350_assignments/LinkedList/cmake-build-debug/CMakeFiles/LinkedList.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/LinkedList.dir/depend
 

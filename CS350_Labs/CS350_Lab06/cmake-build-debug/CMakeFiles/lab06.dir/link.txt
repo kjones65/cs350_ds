@@ -1,0 +1,1 @@
+clang++   -std=c++11 -Wall -g   CMakeFiles/lab06.dir/Tree.cpp.o CMakeFiles/lab06.dir/PrettyPrinter.cpp.o CMakeFiles/lab06.dir/main.cpp.o  -o ../lab06 

@@ -108,7 +108,7 @@ void LinkedList<T>::insert(const T &x) {
 template <class T>
 void LinkedList<T>::remove(const T &x) {
     Node<T> *nodeToRemove = findNode(x);
-    // Make sure this works by debugging and see if values are different
+ 
     if(nodeToRemove!=dummy) {
         nodeToRemove->prev->next = nodeToRemove->next;
         nodeToRemove->next->prev = nodeToRemove->prev;

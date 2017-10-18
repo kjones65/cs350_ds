@@ -58,7 +58,7 @@ void SkipList<T>::insert(const T &x) {
     Node<T> *currentNode = head;
 
     //create update array that will hold pointers to nodes
-    Node<T> *update = new Node<T>[maxHeight + 1];
+    Node<T> **update = new Node<T>*[maxHeight + 1];
 
     // go through skip list until the correct spot is found right before where node will be inserted
     for(int i = height - 1; i>=0; i--) {
@@ -66,7 +66,7 @@ void SkipList<T>::insert(const T &x) {
             currentNode = currentNode->next[i];
         }
         // insert pointer of node into update array
-        update[i] = *currentNode;
+        update[i] = currentNode;
     }
 
     // move to right one more time
@@ -83,7 +83,7 @@ void SkipList<T>::insert(const T &x) {
         //add the header to the update array, so the skip list will have proper pointers
         if(randomLvl > height){
             for(int i=height; i<randomLvl; i++) {
-                update[i] = *head;
+                update[i] = head;
             }
             height = randomLvl;
         }
@@ -91,10 +91,11 @@ void SkipList<T>::insert(const T &x) {
         // create new node, and update the pointer on skip list
         currentNode = new Node<T>(x,randomLvl);
         for(int i = 0; i<randomLvl; i++){
-            currentNode->next[i] = update[i].next[i];
-            update[i].next[i] = currentNode;
+            currentNode->next[i] = update[i]->next[i];
+            update[i]->next[i] = currentNode;
         }
     }
+    delete[] update;
 }
 #endif
 
@@ -108,7 +109,7 @@ void SkipList<T>::remove(const T &x) {
     Node<T> *currentNode = head;
 
     //create update array that will hold pointers to nodes
-    Node<T> *update = new Node<T>[maxHeight + 1];
+    Node<T> **update = new Node<T>*[maxHeight + 1];
 
     // go through skip list until the correct spot is found right before where node will be inserted
     for(int i = height - 1; i>=0; i--) {
@@ -116,7 +117,7 @@ void SkipList<T>::remove(const T &x) {
             currentNode = currentNode->next[i];
         }
         // insert pointer of node into update array
-        update[i] = *currentNode;
+        update[i] = currentNode;
     }
 
     // move to right one more time
@@ -124,16 +125,17 @@ void SkipList<T>::remove(const T &x) {
 
     // check if data exists
     if(currentNode != nullptr && currentNode->data == x) {
-        for(int i = 0; i<= height; i++){
-            if(update[i].next[i] != currentNode)
+        for(int i = 0; i< height; i++){
+            if(update[i]->next[i] != currentNode)
                 break;
-            update[i].next[i] = currentNode->next[i];
+            update[i]->next[i] = currentNode->next[i];
         }
         delete currentNode;
 
         while(height > 0 && head->next[height-1] == nullptr)
             height -= 1;
     }
+    delete[] update;
 }
 #endif
 

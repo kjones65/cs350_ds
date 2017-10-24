@@ -78,8 +78,8 @@ const T& BST<T>::findMax() {
 template<class T>
 void BST<T>::insert(const T &x) {
     if(find(x) == false){
-        Node<T> *newNode = new Node<T>(x);
         if(isEmpty()){
+            Node<T> *newNode = new Node<T>(x);
             root = newNode;
             numNodes += 1;
         } else {
@@ -116,6 +116,7 @@ void BST<T>::remove(const T &x) {
         if(nodeToRemove->data != root->data) {
             delete nodeToRemove;
         }else {
+            delete nodeToRemove;
             root = nullptr;
         }
         numNodes--;
@@ -139,6 +140,7 @@ void BST<T>::remove(const T &x) {
                 parentNode->left->data = nodeToRemoveChild->data;
                 parentNode->left->left = nodeToRemoveChild->left;
                 parentNode->left->right = nodeToRemoveChild->right;
+
             } else {
                 parentNode->right->data = nodeToRemoveChild->data;
                 parentNode->right->left = nodeToRemoveChild->left;
@@ -149,7 +151,6 @@ void BST<T>::remove(const T &x) {
             nodeToRemove->left = nodeToRemoveChild->left;
             nodeToRemove->right = nodeToRemoveChild->right;
         }
-
         delete nodeToRemoveChild;
         numNodes--;
     }

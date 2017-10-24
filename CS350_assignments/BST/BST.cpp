@@ -95,29 +95,62 @@ void BST<T>::insert(const T &x) {
 // remove() method
 template<class T>
 void BST<T>::remove(const T &x) {
-    Node<T> *nodeToRemove = findNode(root, x);
-    if(nodeToRemove == nullptr){
-        //do nothing
-    } else if (findParentOf(nodeToRemove->data) != nullptr && nodeToRemove->left == nullptr && nodeToRemove->right == nullptr) {
-        if(findParentOf(nodeToRemove->data)->left == nodeToRemove)
-            findParentOf(nodeToRemove->data)->left = nullptr;
-        else
-            findParentOf(nodeToRemove->data)->right = nullptr;
-        delete nodeToRemove;
+    Node<T> *parentNode = nullptr;
+    Node<T> *nodeToRemove = root;
+//    Node<T> *foundNode = findNode(root, x);
+    bool found = find(x);
+    if(found && findNode(root, x)->data != root->data) {
+        parentNode = findParentOf(x);
+        nodeToRemove = (parentNode->left == findNode(root, x)) ? parentNode->left : parentNode->right;
+    }
+    if(!found){
+        // do nothing, value not found in BST
+    } else if (nodeToRemove->left == nullptr && nodeToRemove->right == nullptr) {    //no children
+        if (nodeToRemove->data != root->data) {
+            if (parentNode->left->data == nodeToRemove->data) {
+                parentNode->left = nullptr;
+            } else {
+                parentNode->right = nullptr;
+            }
+        }
+        if(nodeToRemove->data != root->data) {
+            delete nodeToRemove;
+        }else {
+            root = nullptr;
+        }
         numNodes--;
-    } else if(nodeToRemove->left != nullptr && nodeToRemove->right != nullptr){
-        nodeToRemove->data = findSuccessor(nodeToRemove)->data;
-        remove(findSuccessor(nodeToRemove)->data);
-        numNodes--;
-    } else if(nodeToRemove->left != nullptr || nodeToRemove->right != nullptr){
-        if(nodeToRemove->left != nullptr){
-            nodeToRemove = nodeToRemove->left;
-            remove(nodeToRemove->left->data);
+    } else if (nodeToRemove->left != nullptr && nodeToRemove->right != nullptr){    //two children
+        Node<T> *succ = findSuccessor(nodeToRemove);
+        int temp = succ->data;
+        remove(succ->data);
+        if(nodeToRemove->data != root->data) {
+            if (parentNode->left->data == nodeToRemove->data) {
+                parentNode->left->data = temp;
+            } else {
+                parentNode->right->data = temp;
+            }
         } else {
-            nodeToRemove = nodeToRemove->right;
-            remove(nodeToRemove->right->data);
+            nodeToRemove->data = temp;
+        }
+    } else if(nodeToRemove->left != nullptr || nodeToRemove->right != nullptr) {      //one child
+        Node<T> *nodeToRemoveChild = (nodeToRemove->left != nullptr) ? nodeToRemove->left : nodeToRemove->right;
+        if(nodeToRemove->data != root->data) {
+            if (parentNode->left->data == nodeToRemove->data) {
+                parentNode->left->data = nodeToRemoveChild->data;
+                parentNode->left->left = nodeToRemoveChild->left;
+                parentNode->left->right = nodeToRemoveChild->right;
+            } else {
+                parentNode->right->data = nodeToRemoveChild->data;
+                parentNode->right->left = nodeToRemoveChild->left;
+                parentNode->right->right = nodeToRemoveChild->right;
+            }
+        } else {
+            nodeToRemove->data = nodeToRemoveChild->data;
+            nodeToRemove->left = nodeToRemoveChild->left;
+            nodeToRemove->right = nodeToRemoveChild->right;
         }
 
+        delete nodeToRemoveChild;
         numNodes--;
     }
 }
@@ -216,7 +249,18 @@ Node<T>* BST<T>::insertNode(Node<T> *node, const T &x) {
 // findSuccessor() private method
 template<class T>
 Node<T>* BST<T>::findSuccessor(Node<T> *node) {
-        return findMinNode(node->right);
+        Node<T> *currentNode = node->right;
+        if(currentNode!=nullptr){
+            Node<T> *nextNode = currentNode->left;
+            while(nextNode != nullptr){
+                currentNode = nextNode;
+                nextNode = nextNode->left;
+            }
+        } else {
+            return nullptr;
+        }
+
+    return currentNode;
 }
 #endif
 

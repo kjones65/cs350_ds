@@ -34,16 +34,15 @@ void Tree<T>::printKeysPostOrder(Node<T> *node) {
 
 }
 
-
 template <class T>
 void Tree<T>::printKeysInOrder(Node<T> *node) {
 
     // Implement method to print keys using InOrder traversal
     if(node->left != nullptr)
-        printKeysPostOrder(node->left);
+        printKeysInOrder(node->left);
     std::cout << node->data <<  " " /*std::endl*/;
     if(node->right != nullptr)
-        printKeysPostOrder(node->right);
+        printKeysInOrder(node->right);
 
 
 }

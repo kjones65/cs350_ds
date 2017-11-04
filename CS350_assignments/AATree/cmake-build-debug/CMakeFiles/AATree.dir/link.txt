@@ -1,0 +1,1 @@
+clang++   -std=c++11 -Wall -g   CMakeFiles/AATree.dir/AATree.cpp.o CMakeFiles/AATree.dir/AATreePrettyPrinter.cpp.o CMakeFiles/AATree.dir/tests.cpp.o  -o ../AATree ../libAATree_Linux.a 
